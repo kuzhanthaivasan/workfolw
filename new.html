@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Handling Process Workflow</title>
+    <style>
+        .flowchart {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 20px;
+        }
+
+        .node {
+            display: inline-block;
+            margin: 20px;
+            padding: 20px;
+            background-color: #e8f4fc;
+            border: 2px solid #0b75c9;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #0b75c9;
+        }
+
+        .arrow {
+            margin: 10px;
+        }
+
+        .decision {
+            background-color: #fde8b1;
+            border-color: #f5a623;
+            color: #f5a623;
+        }
+
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .node:hover .tooltip {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="flowchart">
+        <div class="node">Start</div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            User Submits Ticket<br>
+            <small>Input: Issue details</small>
+            <span class="tooltip">Users can provide a description, category, and priority level for the issue.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Ticket Categorization<br>
+            <small>Auto or Manual</small>
+            <span class="tooltip">The system automatically categorizes tickets based on rules or allows manual assignment.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Ticket Assignment<br>
+            <small>Assign to team/individual</small>
+            <span class="tooltip">Tickets are assigned to the most suitable team or person based on expertise and workload.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Acknowledgment Sent<br>
+            <small>Notify user with Ticket ID</small>
+            <span class="tooltip">Users receive an acknowledgment email with their ticket ID and expected resolution time.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Work on Ticket<br>
+            <small>Updates added regularly</small>
+            <span class="tooltip">The assigned team works on the ticket, providing status updates and resolving issues promptly.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node decision">
+            Resolve or Escalate?<br>
+            <small>Decision point</small>
+            <span class="tooltip">If unresolved within SLA, the ticket is escalated to a higher authority for faster resolution.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Resolution Confirmation<br>
+            <small>User notified</small>
+            <span class="tooltip">Users are informed of the resolution and asked for confirmation or feedback.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Close Ticket<br>
+            <small>Confirmed or time-out</small>
+            <span class="tooltip">Tickets are closed after user confirmation or if no feedback is received within a set time.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">
+            Generate Reports<br>
+            <small>For analytics</small>
+            <span class="tooltip">Data from tickets is compiled into reports to identify trends and improve performance.</span>
+        </div>
+        <div class="arrow">&#8595;</div>
+        <div class="node">End</div>
+    </div>
+</body>
+</html>
